@@ -1,18 +1,17 @@
 # 宿題を管理するやーつ
-## スペシャルサンクス
-* クリエイターとして頑張ってる友だちくん
-  * 無断でアイデアをパクってしまったことを謝罪します 
 ## 動作する環境
 * Microsoft Excel
   * マクロ有効ブックが動作する環境
     * モバイル版やブラウザ版では動作しません
 
 ## 解説
+* クリエイターとして活躍してる友だちくん
+  * 無断でアイデアをパクってしまったことを謝罪します
 ### 課題登録シート
 ![Registration](img/Registration.png)
 #### 各セルの解説
 ##### C3（科目名）
-* 科目をプリダウンメニューから選択する
+* 科目をプルダウンメニューから選択する
 * [入力規則](#データの入力規則) 参照
 ##### C4（表題）
 * 課題名を手動で入力
@@ -23,7 +22,7 @@
 ##### C7（備考）
 * メモを手動入力
 #### Visual Basic for Application
-  * [標準モジュール - Registration.bas](bas/Registration.bas)
+  * [Registration.bas](bas/Registration.bas)
     * 詳細はコメントアウトを確認
     * ボタン１(登録)とリンク
   * [ダウンロードとコピペで使えるExcelVBAのカレンダーコントロール - ateitexe](https://ateitexe.com/excel-vba-calendar-control2/)
@@ -77,7 +76,9 @@
 基本的にマクロや関数などExcelの機能で設定するので触らない方がいい
 ##### I1
 * 日付の設定
-* `=Today()`
+  ```
+  =Today()
+  ```
 ##### A3（課題ナンバー）
 * テーブルのオートフィルにより自動入力
 ##### B3（表題）
@@ -154,4 +155,4 @@
 * [ダウンロードとコピペで使えるExcelVBAのカレンダーコントロール - ateitexe](https://ateitexe.com/excel-vba-calendar-control2/)
 * [【Excelパワークエリ】複数のテーブルを結合する【テーブルもしくはブックからクエリを作成】- 大体でIT](https://daitaideit.com/excel-powerquery-join-multi-table/)
 * [【コピペOK】Excelでシート名を取得する方法の基本と応用－シート名を使った活用例 - ワカルニ](https://briarpatch.co.jp/wakaruni/excel-sheetname-acquisition/)
-* [image.md - github](https://gist.github.com/Tatzyr/3847141)
+* [tatzyr/image.md - github gist](https://gist.github.com/Tatzyr/3847141)
