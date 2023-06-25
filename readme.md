@@ -1,12 +1,14 @@
 # 宿題を管理するやーつ
+
+## スペシャルサンクス
+* クリエイターとして活躍してる友だちくん
+  * 無断でアイデアをパクってしまったことを謝罪します
 ## 動作する環境
 * Microsoft Excel
   * マクロ有効ブックが動作する環境
     * モバイル版やブラウザ版では動作しません
 
 ## 解説
-* クリエイターとして活躍してる友だちくん
-  * 無断でアイデアをパクってしまったことを謝罪します
 ### 課題登録シート
 ![Registration](img/Registration.png)
 #### 各セルの解説
@@ -41,6 +43,10 @@
         ```
         コンピュータ構成論,倫理学,ビジネスデータ分析,データサイエンス入門,ネットワーク論,先端技術論,地理学,日本史,特別B,自然科学史,プログラミング,生涯スポーツ論
         ```
+      * 以下で代用
+        ```
+        =科目リスト
+        ```
 
 ### 課題管理シート
 ![List](img/List.png)
@@ -49,6 +55,7 @@
 
   * 各シートのテーブルを結合しひとつのデータにまとめる
   * テーブル設定しているのでソートや並び替えが可能
+  * 使い方は[UsePowerQuery](UsePowerQuery.md)を参照
 #### Visual Basic for Application
 * [Query_Refresh.bas](bas/Query_Refresh.bas)
   * クエリの更新ボタン
@@ -114,11 +121,10 @@
     |セルの値'今日'を含む  | #92D050 |
     |セルの値が'受付終了'を含む | #FFC7CE |
     * 設定例
-        * ルール管理ウィンドウ
-         ![E3-1](img/E3-1.png)
-
+        * ルール管理ウィンドウ 
+        ![E3-1](img/E3-1.png)
         * 編集ウィンドウ
-         ![E3-2](img/E3-2.png)
+        ![E3-2](img/E3-2.png)
 ##### F3（命名規則）
 * シート名を表示する
   * Power Queryを適用時に科目を識別するため
@@ -161,3 +167,21 @@
 * [【Excelパワークエリ】複数のテーブルを結合する【テーブルもしくはブックからクエリを作成】- 大体でIT](https://daitaideit.com/excel-powerquery-join-multi-table/)
 * [【コピペOK】Excelでシート名を取得する方法の基本と応用－シート名を使った活用例 - ワカルニ](https://briarpatch.co.jp/wakaruni/excel-sheetname-acquisition/)
 * [tatzyr/image.md - github gist](https://gist.github.com/Tatzyr/3847141)
+* [[Excel で VBA] For 文の続き／While 文による繰り返し](https://brain.cc.kogakuin.ac.jp/~kanamaru/lecture/vba2013/04-for02.html)
+* [【VBA】テーブル名を取得する方法【ListObjectsを使う】- 大体でIT](https://daitaideit.com/vba-table-get-table-name/#mokuzi1-2)
+* [【VBA入門】シートのコピーと移動(複数コピーや名前の変更も解説) - SAMURAIENGINEER](https://www.sejuku.net/blog/29120)
+  
+## 更新歴
+### v1.0
+* 2023-05-22
+* 初期版
+### v1.1
+* 2023-05-22
+* 書式設定の見直し
+### v2.0
+* 2023-06-23
+* Power Query追加
+### v2.1
+* 2023-06-25
+* 課題登録フォーム追加
+* 授業の追加を自動化
