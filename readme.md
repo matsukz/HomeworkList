@@ -27,6 +27,10 @@
   * [Registration.bas](bas/Registration.bas)
     * 詳細はコメントアウトを確認
     * ボタン１(登録)とリンク
+  * [kadaicount.bas](bas/kadaicount.bas)
+      ![kadaicount](img/kadaicount.png)
+    * [課題管理シート](#課題管理シート)の課題数をカウントします
+    * 実行トリガーは`登録ボタン`押下時、または[課題管理シート](#課題管理シート)にある`クエリ更新ボタン`押下時です
   * [ダウンロードとコピペで使えるExcelVBAのカレンダーコントロール - ateitexe](https://ateitexe.com/excel-vba-calendar-control2/)
     * カレンダーの実装
     * 特定のセルをダブルクリックするとカレンダーフォームが表示される
