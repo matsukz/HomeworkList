@@ -1,13 +1,13 @@
 Attribute VB_Name = "Registration"
 Sub Touroku()
 
-    Worksheets("‰Û‘è“o˜^").Select
+    Worksheets("èª²é¡Œç™»éŒ²").Select
 
     Dim Kamoku, Hyodai, Bikou, TableName As String
     Dim InstCount As Integer
     Dim St_Date, En_Date As Date
     
-    'Še•Ï”‚Ö‚ÌŠi”[
+    'å„å¤‰æ•°ã¸ã®æ ¼ç´
     Kamoku = Range("C3")
     Hyodai = Range("C4")
     St_Date = Range("C5")
@@ -15,41 +15,43 @@ Sub Touroku()
     Bikou = Range("C7")
     
     
-    'ƒ[ƒNƒV[ƒgˆÚ“®
+    'ãƒ¯ãƒ¼ã‚¯ã‚·ãƒ¼ãƒˆç§»å‹•
     Worksheets(Kamoku).Select
-    'ƒe[ƒuƒ‹‘I‘ğ
+    'ãƒ†ãƒ¼ãƒ–ãƒ«é¸æŠ
     TableName = Kamoku & "[#ALL]"
     InstCount = Range(TableName).Rows.Count + 2
     
 
-    '“]‹LŠJn
-    '‰Û‘èƒiƒ“ƒo[
+    'è»¢è¨˜é–‹å§‹
+    'èª²é¡ŒãƒŠãƒ³ãƒãƒ¼
     Cells(InstCount, 1) = Cells(InstCount - 1, 1) + 1
     
-    '•\‘è
+    'è¡¨é¡Œ
     Cells(InstCount, 2) = Hyodai
     
-    'Šeí“ú•t
+    'å„ç¨®æ—¥ä»˜
     Cells(InstCount, 3) = St_Date
     Cells(InstCount, 4) = En_Date
     
-    '”[Šú/“ú•t‚ÍƒV[ƒgã‚ÅŒvZ‚·‚é
+    'ç´æœŸ/æ—¥ä»˜ã¯ã‚·ãƒ¼ãƒˆä¸Šã§è¨ˆç®—ã™ã‚‹
     
-    '–½–¼‹K‘¥
+    'å‘½åè¦å‰‡
     Cells(InstCount, 6) = Kamoku
     
-    'i’»/’ño
-    Cells(InstCount, 7) = "–¢Š®¬"
-    Cells(InstCount, 8) = "–¢’ño"
+    'é€²æ—/æå‡º
+    Cells(InstCount, 7) = "æœªå®Œæˆ"
+    Cells(InstCount, 8) = "æœªæå‡º"
     
-    '”õl
+    'å‚™è€ƒ
     Cells(InstCount, 9) = Bikou
     
-    'Œãn––
-    Worksheets("‰Û‘èŠÇ—").Select
-    ActiveWorkbook.Connections("ƒNƒGƒŠ - ‰Û‘èŠÇ—").Refresh
+    'å¾Œå§‹æœ«
+    Worksheets("èª²é¡Œç®¡ç†").Select
+    ActiveWorkbook.Connections("ã‚¯ã‚¨ãƒª - èª²é¡Œç®¡ç†").Refresh
     
-    Worksheets("‰Û‘è“o˜^").Select
+    Worksheets("èª²é¡Œç™»éŒ²").Select
     Range("C3").Select
+    
+    Call kadaicount.kadaicount
     
 End Sub
