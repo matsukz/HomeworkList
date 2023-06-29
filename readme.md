@@ -11,6 +11,7 @@
 ## 解説
 ### 課題登録シート
 ![Registration](img/Registration.png)
+![kadaicount](img/kadaicount.png)
 #### 各セルの解説
 ##### C3（科目名）
 * 科目をプルダウンメニューから選択する
@@ -28,7 +29,6 @@
     * 詳細はコメントアウトを確認
     * ボタン１(登録)とリンク
   * [kadaicount.bas](bas/kadaicount.bas)
-      ![kadaicount](img/kadaicount.png)
     * [課題管理シート](#課題管理シート)の課題数をカウントします
     * 実行トリガーは`登録ボタン`押下時、または[課題管理シート](#課題管理シート)にある`クエリ更新ボタン`押下時です
   * [ダウンロードとコピペで使えるExcelVBAのカレンダーコントロール - ateitexe](https://ateitexe.com/excel-vba-calendar-control2/)
@@ -189,3 +189,6 @@
 * 2023-06-25
 * 課題登録フォーム追加
 * 授業の追加を自動化
+### v2.2
+* 2023-06-29
+* 未提出課題のカウント機能を追加
