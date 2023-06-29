@@ -6,6 +6,9 @@ Attribute Query_Refresh.VB_ProcData.VB_Invoke_Func = "p\n14"
 '
 ' Keyboard Shortcut: Ctrl+p
 '
-    Range("�ۑ�Ǘ�[[#Headers],[�ۑ�i���o�[]]").Select
-    ActiveWorkbook.Connections("�N�G�� - �ۑ�Ǘ�").Refresh
+    Range("課題管理[[#Headers],[課題ナンバー]]").Select
+    ActiveWorkbook.Connections("クエリ - 課題管理").Refresh
+    
+    Call kadaicount.kadaicount
+    
 End Sub
