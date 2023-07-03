@@ -9,79 +9,6 @@
     * モバイル版やブラウザ版では動作しません
 
 ## 解説
-### 課題登録シート
-![Registration](img/Registration.png)
-![kadaicount](img/kadaicount.png)
-#### 各セルの解説
-##### C3（科目名）
-* 科目をプルダウンメニューから選択する
-* [入力規則](#データの入力規則) 参照
-##### C4（表題）
-* 課題名を手動で入力
-##### C5（課題提示日）
-* [課題提示日](#visual-basic-for-application) 適応
-##### C6（課題提示期限）
-* [課題提示日](#visual-basic-for-application) 適応
-##### C7（備考）
-* メモを手動入力
-#### Visual Basic for Application
-  * [Registration.bas](bas/Registration.bas)
-    * 詳細はコメントアウトを確認
-    * ボタン１(登録)とリンク
-  * [kadaicount.bas](bas/kadaicount.bas)
-    * [課題管理シート](#課題管理シート)の課題数をカウントします
-    * 実行トリガーは`登録ボタン`押下時、または[課題管理シート](#課題管理シート)にある`クエリ更新ボタン`押下時です
-  * [ダウンロードとコピペで使えるExcelVBAのカレンダーコントロール - ateitexe](https://ateitexe.com/excel-vba-calendar-control2/)
-    * カレンダーの実装
-    * 特定のセルをダブルクリックするとカレンダーフォームが表示される
-    * このシートでは`課題提示日`と`課題提出期限`で利用
-#### データの入力規則
-* 設定
-  1. 設定セルをアクティブにする
-  2. データタブを選択
-  3. `データツール`内の`データの入力規則`を選択
-  4. `設定`タブの`入力の種類`を`リスト`にする
-  5. `元の値`を編集する
-     * 各科目シートのシート名と一致していないと[Registration.bas](#visual-basic-for-application)がエラーとなる
-     * 初期値
-        ```
-        コンピュータ構成論,倫理学,ビジネスデータ分析,データサイエンス入門,ネットワーク論,先端技術論,地理学,日本史,特別B,自然科学史,プログラミング,生涯スポーツ論
-        ```
-      * 以下で代用
-        ```
-        =科目リスト
-        ```
-
-### 課題管理シート
-![List](img/List.png)
-#### Power Query
-* [【Excelパワークエリ】複数のテーブルを結合する【テーブルもしくはブックからクエリを作成】- 大体でIT](https://daitaideit.com/excel-powerquery-join-multi-table/)
-
-  * 各シートのテーブルを結合しひとつのデータにまとめる
-  * テーブル設定しているのでソートや並び替えが可能
-  * 使い方は[UsePowerQuery](UsePowerQuery.md)を参照
-#### Visual Basic for Application
-* [Query_Refresh.bas](bas/Query_Refresh.bas)
-  * クエリの更新ボタン
-
-### 各科目シート
-* 初期例（各科目分シートを複製する）
-![Class_Syoki](img/Class_Syoki.png)
-
-* 利用例
-![Class](img/Class.png)
-#### Visual Basic for Application
-* カレンダーを手動で編集するのに利用
-* [ダウンロードとコピペで使えるExcelVBAのカレンダーコントロール - ateitexe](https://ateitexe.com/excel-vba-calendar-control2/) の「特定の列/行だけ」を参照する
-#### テーブル
-* VBAやPower Queryでテーブルを管理するために利用
-* 自動でオートフィルを実行し書式を設定してくれる
-* 注意
-  * シート名とテーブル名を一致させる 
-    * [Registration.bas](#visual-basic-for-application)がエラーになる
-  * 課題が存在しなくてもひとつは登録しておく
-    * 登録時にオートフィル機能を利用するため 
-    * ひとつめの課題は手動で編集する
 
 #### 各セルの関数
 基本的にマクロや関数などExcelの機能で設定するので触らない方がいい
@@ -189,6 +116,3 @@
 * 2023-06-25
 * 課題登録フォーム追加
 * 授業の追加を自動化
-### v2.2
-* 2023-06-29
-* 未提出課題のカウント機能を追加
